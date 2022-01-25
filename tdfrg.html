@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jerma.css">
+</head>
+<body>
+    <img style="width: 95rem; height: 45.8rem;" id="test" src="Evil_Jerma.png" alt="Evil_Jerma">
+    <script>
+        var sus = false
+        document.getElementById('test').addEventListener('mousedown', function(event){
+  console.log(event.currentTarget)
+  event.currentTarget.src=(sus == false && 'JermaSus.jpg') || "Evil_Jerma.png"
+  sus = !sus
+  if (sus == true){
+    var audio = new Audio('sus.mp3');
+audio.play();
+
+  }
+})
+    </script>
+</body>
+</html>
